@@ -1,5 +1,5 @@
 var range = function(start,end){
-  var step = arguments[2]||1;
+  var step = arguments[2]||(start>end?-1:1);
   console.log("step:",step);
   var result = [];
   if(step>0){
@@ -24,5 +24,5 @@ var sum = function(list){
     
 console.log(sum(range(1, 10)));
 // → 55
-console.log(range(5, 2, -1));
+console.log(range(5, 2));
 // → [5, 4, 3, 2]
